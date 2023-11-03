@@ -43,12 +43,12 @@ except Exception as e:
  errmsg += " MQTT client import error: "+str(e)
  
 def getEnergyNames(pUnitname):
- if pUnitname.startswith('Heat_Energy_') :
-  return "Heat_Energy_Consumption","Heat_Energy_Production","Heat_Energy_COP"
- if pUnitname.startswith('Cool_Energy_') :
-  return "Cool_Energy_Consumption","Cool_Energy_Production","Cool_Energy_COP"
- if pUnitname.startswith('DHW_Energy_') :
-  return "DHW_Energy_Consumption","DHW_Energy_Production","DHW_Energy_COP"
+ if pUnitname.startswith('Heat_Power_') :
+  return "Heat_Power_Consumption","Heat_Power_Production","Heat_Power_COP"
+ if pUnitname.startswith('Cool_Power_') :
+  return "Cool_Power_Consumption","Cool_Power_Production","Cool_Power_COP"
+ if pUnitname.startswith('DHW_Power_') :
+  return "DHW_Power_Consumption","DHW_Power_Production","DHW_Power_COP"
  
 def getSplitVal(sValue, index):
  try:
@@ -191,13 +191,13 @@ class BasePlugin:
     command_switch_devices = ["Heatpump_State", "Defrosting_State", "Sterilization_State", "Force_DHW_State", "Pump_Service_Mode"]
     command_sel_devices = ["Quiet_Mode_Level", "Powerful_Mode_Time", "Operating_Mode_State", "Zones_State", "Holiday_Mode_State"]     
     sel_switch_devices = [ "ThreeWay_Valve_State", "Cooling_Mode","Heating_Mode"]       
-    watt_devices =["Cool_Energy_Consumption", "Cool_Energy_Production", "DHW_Energy_Consumption", "DHW_Energy_Production", "Heat_Energy_Consumption", "Heat_Energy_Production"]
+    watt_devices =["Cool_Power_Consumption", "Cool_Power_Production", "DHW_Power_Consumption", "DHW_Power_Production", "Heat_Power_Consumption", "Heat_Power_Production"]
     counter_devices = ["Operations_Counter", "Operations_Hours", "DHW_Heater_Operations_Hours", "Room_Heater_Operations_Hours", "Sterilization_Max_Time", "Pump_Duty", "Defrost_Counter"] 
     speed_devices = ["Pump_Speed", "Fan1_Motor_Speed", "Fan2_Motor_Speed"]   
     pressure_devices = ["Low_Pressure", "High_Pressure"]
     text_devices = ["Heat_Pump_Model"]
     alert_devices = ["Error"]
-    COP_devices = ["Cool_Energy_COP", "DHW_Energy_COP", "Heat_Energy_COP"]
+    COP_devices = ["Cool_Power_COP", "DHW_Power_COP", "Heat_Power_COP"]
     
     def __init__(self):
      return
