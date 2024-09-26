@@ -75,11 +75,21 @@ Version 0.2.0 ->
 		- Change Error from Text to Alert
 		- Add Heat Pump Model
 		- Add Pump Duty		- 
-Version 0.2.0 -> 
+Version 0.2.1 -> 
 		- Added WattHourTotal to S0 (General,kWh)
 		- Added Defrost Counter
 		- Detect old Heishamon Firmware
 		- Code cleanup
+Version 0.2.2 -> 
+		- Added default value Defrost Counter
+Version 0.2.3 -> 
+		- Fixed parse issue since Heishamon v3
+		- Only update domoticz value if value changes
+		- Fix Force_DHW_State and Holiday_Mode_State
+		- Changed kWh devices to Watt devices 
+		- Added Pump_Service_Mode
+Version 0.2.4 -> 
+		- Fixed *_Energy_* -> *_Power_* for Heishamon V3.2
 		
 
 ```
